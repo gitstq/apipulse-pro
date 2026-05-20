@@ -1,0 +1,40 @@
+{
+  "endpoints": [
+    {
+      "name": "GitHub API",
+      "url": "https://api.github.com",
+      "method": "GET",
+      "headers": {
+        "User-Agent": "APIPulse-Pro"
+      },
+      "expected_status": 200,
+      "timeout": 10
+    },
+    {
+      "name": "JSONPlaceholder API",
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "method": "GET",
+      "expected_status": 200,
+      "timeout": 10
+    },
+    {
+      "name": "HTTPBin Health",
+      "url": "https://httpbin.org/status/200",
+      "method": "GET",
+      "expected_status": 200,
+      "timeout": 15
+    },
+    {
+      "name": "httpbinDelay Test",
+      "url": "https://httpbin.org/delay/1",
+      "method": "GET",
+      "expected_status": 200,
+      "timeout": 5
+    }
+  ],
+  "alert_thresholds": {
+    "response_time": 1000,
+    "error_rate": 5,
+    "success_rate": 95
+  }
+}
